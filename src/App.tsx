@@ -2,10 +2,11 @@ import { Hero } from './components/Hero';
 import { SectionNav } from './components/SectionNav';
 import { Footer } from './components/Footer';
 import { MaisQueCargos } from './components/proposals/MaisQueCargos';
+import { RelatosDeAfeto } from './components/proposals/RelatosDeAfeto';
 import { proposals } from './data/content';
 
 function App() {
-  const remaining = proposals.filter((p) => p.id !== 'mais-que-cargos');
+  const remaining = proposals.filter((p) => p.id === 'bbb-instrucao');
 
   return (
     <>
@@ -14,8 +15,9 @@ function App() {
       <SectionNav />
       <main>
         <MaisQueCargos />
+        <RelatosDeAfeto />
 
-        {/* Placeholder sections — replaced by proposal components in U6–U7. */}
+        {/* Placeholder section — replaced by the BBB component in U7. */}
         {remaining.map((p) => (
           <section key={p.id} id={p.id} style={{ minHeight: '60vh', padding: '4rem 1rem', textAlign: 'center' }}>
             <p style={{ textTransform: 'uppercase', letterSpacing: '0.15em', color: 'var(--leo-red)', fontWeight: 600 }}>{p.eyebrow}</p>
