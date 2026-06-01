@@ -1,0 +1,119 @@
+.numbers {
+  position: relative;
+  padding: var(--space-4xl) var(--container-padding);
+  background: var(--leo-blue-dark);
+  overflow: hidden;
+}
+
+.container {
+  position: relative;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  z-index: 1;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: var(--space-2xl);
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--leo-gold);
+  margin-bottom: var(--space-md);
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 500;
+  color: white;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-xl);
+}
+
+.card {
+  position: relative;
+  text-align: center;
+  padding: var(--space-2xl) var(--space-lg);
+  background: rgba(26, 47, 74, 0.6);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 229, 0, 0.15);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: border-color var(--duration-normal) var(--ease-out);
+}
+
+.card:hover {
+  border-color: rgba(255, 229, 0, 0.35);
+}
+
+.valueWrapper {
+  margin-bottom: var(--space-md);
+}
+
+.value {
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 600;
+  color: var(--leo-gold);
+  line-height: 1;
+}
+
+.label {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  margin-bottom: var(--space-xs);
+}
+
+.description {
+  font-size: 0.8125rem;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.5;
+}
+
+.cornerAccent {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, rgba(255, 229, 0, 0.1) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.bgPattern {
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  opacity: 0.03;
+  pointer-events: none;
+  mix-blend-mode: overlay;
+}
+
+@media (max-width: 1024px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .numbers {
+    padding: var(--space-3xl) var(--container-padding);
+  }
+
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+  }
+}
