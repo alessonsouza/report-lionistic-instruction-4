@@ -1,0 +1,171 @@
+.footer {
+  position: relative;
+  background: var(--leo-navy);
+}
+
+.topBorder {
+  height: 3px;
+  background: linear-gradient(90deg, var(--leo-gold) 0%, var(--leo-red) 100%);
+}
+
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+.content {
+  padding: var(--space-4xl) 0 var(--space-2xl);
+}
+
+.mainInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: var(--space-3xl);
+  margin-bottom: var(--space-2xl);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-lg);
+}
+
+.logoImage {
+  width: 60px;
+  height: auto;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3));
+}
+
+.logoText {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.clubName {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: white;
+}
+
+.district {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.motto {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--leo-gold);
+}
+
+.activity {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  text-align: right;
+  align-items: flex-end;
+}
+
+.activityLabel {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.proposalList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  align-items: flex-end;
+}
+
+.proposalLink {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: white;
+  transition: color var(--duration-fast) var(--ease-out);
+}
+
+.proposalLink:hover {
+  color: var(--leo-gold);
+}
+
+.proposalNumber {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--leo-gold);
+}
+
+.activityPartnership {
+  font-size: 0.8125rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
+  margin-bottom: var(--space-xl);
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+}
+
+.copyright,
+.tagline {
+  font-size: 0.8125rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.muralLink {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--leo-gold);
+  transition: color var(--duration-fast) var(--ease-out);
+}
+
+.muralLink:hover {
+  color: var(--leo-gold-light);
+}
+
+@media (max-width: 768px) {
+  .mainInfo {
+    flex-direction: column;
+    gap: var(--space-xl);
+  }
+
+  .activity {
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  .proposalList {
+    align-items: flex-start;
+  }
+
+  .bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+}
