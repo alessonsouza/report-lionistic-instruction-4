@@ -89,14 +89,16 @@
 }
 
 /* Collapsed state: fixed clamp height with a fade into the card background. */
+/* Fixed collapsed height so every card matches, regardless of text length. */
 .clamped {
-  max-height: 26rem;
+  height: 22rem;
   overflow: hidden;
   position: relative;
-  margin-bottom: var(--space-md);
+  margin-bottom: var(--space-sm);
 }
 
-.clamped::after {
+/* Fade only on cards that actually overflow the fixed height. */
+.faded::after {
   content: '';
   position: absolute;
   left: 0;
@@ -108,25 +110,24 @@
 }
 
 .toggle {
+  align-self: center;
   display: inline-flex;
   align-items: center;
-  gap: var(--space-xs);
-  align-self: center;
+  gap: 0.3rem;
   margin-bottom: var(--space-xl);
-  padding: var(--space-xs) var(--space-lg);
-  border-radius: 100px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--leo-navy);
-  background: var(--leo-gold-pale);
-  border: 1px solid var(--leo-gold);
-  transition: background var(--duration-fast) var(--ease-out),
-    transform var(--duration-fast) var(--ease-out);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--leo-red);
+  transition: color var(--duration-fast) var(--ease-out);
 }
 
 .toggle:hover {
-  background: var(--leo-gold-light);
-  transform: translateY(-1px);
+  color: var(--leo-red-dark);
+  text-decoration: underline;
 }
 
 .toggleIcon {

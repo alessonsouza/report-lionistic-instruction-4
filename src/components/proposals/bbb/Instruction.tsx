@@ -55,7 +55,11 @@ function InstructionCard({ item, index }: { item: InstructionItem; index: number
 
       <div
         ref={textRef}
-        className={expanded ? styles.textContent : `${styles.textContent} ${styles.clamped}`}
+        className={
+          expanded
+            ? styles.textContent
+            : `${styles.textContent} ${styles.clamped}${overflowing ? ` ${styles.faded}` : ''}`
+        }
       >
         {item.paragraphs.map((paragraph, i) => (
           // Static, author-authored HTML from content.ts - no user input.
