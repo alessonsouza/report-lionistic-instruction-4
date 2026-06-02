@@ -56,6 +56,8 @@
 }
 
 .card {
+  display: flex;
+  flex-direction: column;
   background: var(--cream);
   border: 1px solid var(--cream-dark);
   border-radius: var(--radius-xl);
@@ -84,6 +86,56 @@
 
 .textContent {
   margin-bottom: var(--space-2xl);
+}
+
+/* Collapsed state: fixed clamp height with a fade into the card background. */
+.clamped {
+  max-height: 26rem;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: var(--space-md);
+}
+
+.clamped::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 5rem;
+  background: linear-gradient(to bottom, rgba(245, 240, 232, 0) 0%, var(--cream) 100%);
+  pointer-events: none;
+}
+
+.toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  align-self: center;
+  margin-bottom: var(--space-xl);
+  padding: var(--space-xs) var(--space-lg);
+  border-radius: 100px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--leo-navy);
+  background: var(--leo-gold-pale);
+  border: 1px solid var(--leo-gold);
+  transition: background var(--duration-fast) var(--ease-out),
+    transform var(--duration-fast) var(--ease-out);
+}
+
+.toggle:hover {
+  background: var(--leo-gold-light);
+  transform: translateY(-1px);
+}
+
+.toggleIcon {
+  transition: transform var(--duration-fast) var(--ease-out);
+}
+
+.toggleIconUp {
+  transform: rotate(180deg);
+  transition: transform var(--duration-fast) var(--ease-out);
 }
 
 .paragraph {
