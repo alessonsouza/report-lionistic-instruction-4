@@ -297,6 +297,14 @@ export const proposals: Proposal[] = [
             ],
             author: { name: 'C.LEO Letícia Simon', club: 'LEO Clube Ômega Pinhalzinho' },
           },
+          {
+            theme: 'Propósito',
+            paragraphs: [
+              'A liderança e o trabalho voluntário estão em sinergia quando o assunto é servir. Quem serve com propósito, lidera com sentido. Muitos de nós somos questionados, e muitas vezes nos indagamos também, sobre o motivo de fazer parte de um movimento como o Lions e LEO Clube, visto que demanda tempo, energia e dedicação. Porém, com o passar das atividades, campanhas e reuniões, o servir começa a fazer sentido quando está alinhado com o desenvolvimento pessoal de cada um de nós. Em cada planejamento e ação, temos a oportunidade de nos transformarmos, amadurecermos e aprendermos conosco, com a comunidade e com os nossos companheiros. Além disso, a cada dia do voluntariado, preenchemos nosso coração e nossa história com alma, propósito e amor, trazendo sentido para o servir.',
+              'Ter a experiência de servir através do voluntariado faz o companheiro desenvolver a empatia, a visão coletiva e a responsabilidade, sendo capaz de transformar realidades por meio das ações realizadas. <strong>Quem serve para liderar transforma a si mesmo. Quem lidera para servir transforma vidas.</strong>',
+            ],
+            author: { name: 'C.LEO Maria Laura Rolim', club: 'LEO Clube Ômega Pinhalzinho · Lions Clube Pinhalzinho' },
+          },
         ],
       },
       acknowledgments: {
