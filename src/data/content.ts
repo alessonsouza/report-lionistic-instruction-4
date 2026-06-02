@@ -245,7 +245,7 @@ export const proposals: Proposal[] = [
         items: [
           { id: 1, date: 'Planejamento', title: 'Idealização e Desenvolvimento', description: 'Criação da página web de votação inspirada no visual do BBB, com sistema de votação validado por CPF.', icon: 'code' },
           { id: 2, date: 'Divulgação', title: 'Compartilhamento no Grupo', description: 'Envio do link da votação e apresentação dos companheiros emparedados no grupo de WhatsApp do clube, gerando engajamento imediato.', icon: 'share' },
-          { id: 3, date: 'Período de Votação', title: 'Votação Aberta', description: '27 votos foram registrados com validação por CPF para garantir a legitimidade. O clube se divertiu acompanhando o resultado parcial.', icon: 'vote' },
+          { id: 3, date: 'Período de Votação', title: 'Votação Aberta', description: '22 votos foram registrados com validação por CPF para garantir a legitimidade. O clube se divertiu acompanhando o resultado parcial.', icon: 'vote' },
           { id: 4, date: 'Apuração', title: 'Resultado da Votação', description: 'Carolina Cecatto ficou em 1º lugar (faria a instrução leoística) e Eloá Goularte em 2º (faria a invocação a Deus).', icon: 'trophy' },
           { id: 5, date: '28/03/2026', title: 'Execução na Reunião', description: 'As companheiras escolhidas realizaram a instrução leoística e a invocação a Deus na reunião do clube, com temas sugeridos disponíveis na página.', icon: 'star' },
         ],
@@ -253,7 +253,7 @@ export const proposals: Proposal[] = [
       numbers: {
         title: 'Impacto',
         items: [
-          { value: 27, label: 'Votos Registrados', description: 'com validação por CPF' },
+          { value: 22, label: 'Votos Registrados', description: 'com validação por CPF' },
           { value: 3, label: 'Companheiros Emparedados', description: 'no paredão leoístico' },
           { value: 3, label: 'Temas Sugeridos', description: 'para a instrução leoística' },
           { value: 2, label: 'Pastas Unidas', description: 'instrução + presidência' },
