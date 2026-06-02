@@ -1,73 +1,48 @@
-# React + TypeScript + Vite
+# Relatório de Trimestre — Instrução Leoística
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Relatório de trimestre da Diretoria de Instrução Leoística do **LEO Clube Ômega Pinhalzinho-SC** (Distrito LD-8), sob a proposta *Unir para Instruir*. Página única que apresenta três propostas:
 
-Currently, two official plugins are available:
+1. **Faça Acontecer – Escrevendo Nossa História** (*Mais que cargos, somos causas*) — entrevistas com os diretores do clube (galeria + vídeo).
+2. **Relatos de Afeto: Memórias do Servir** — vitrine do mural digital coletivo (fotos, curtidas/comentários e stories).
+3. **BBB da Instrução** — dinâmica de votação inspirada no BBB (linha do tempo, números, instrução e agradecimentos).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Stack: React 19 + Vite + TypeScript, animações com framer-motion, estilos em CSS Modules. Conteúdo centralizado em [`src/data/content.ts`](src/data/content.ts) — edite os textos lá, sem mexer nos componentes.
 
-## React Compiler
+## Desenvolvimento
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+bun install
+bun run dev       # servidor de desenvolvimento
+bun run build     # type-check + build de produção
+bun run preview   # pré-visualizar o build
+bun run lint      # eslint
+bun run test      # vitest (Gallery + SectionNav)
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Preparação de mídia (passo único)
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+As imagens já estão otimizadas e versionadas. Para reprocessá-las (redimensiona ≤1600px, recomprime e normaliza nomes):
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+bun run optimize:images
 ```
+
+### Vídeo das entrevistas
+
+O arquivo original `.MOV` (~808 MB) **não** é versionado (está no `.gitignore`). Converta-o para um MP4 leve, próprio para web, e coloque o resultado em `public/mais-que-cargos/video-entrevistas.mp4` (referenciado pelo player). Requer [ffmpeg](https://ffmpeg.org/):
+
+```bash
+ffmpeg -i "public/mais-que-cargos/video-entrevistas-da-proposta.MOV" \
+  -vf scale=-2:720 -c:v libx264 -crf 23 -preset medium \
+  -c:a aac -movflags +faststart \
+  public/mais-que-cargos/video-entrevistas.mp4
+```
+
+Enquanto o MP4 não existir, o player exibe a imagem de capa com o selo "Vídeo em processamento". A imagem de capa (`capa-todos-diretores-entrevistando.jpg`) já serve de *poster*, então um passo separado de `ffmpeg` para o poster não é necessário.
+
+## Conteúdo pendente
+
+Marcados como `// TODO(content):` em `src/data/content.ts`:
+
+- Redação final adaptada de cada proposta.
+- A **URL do mural ao vivo** (`proposals[relatos-de-afeto].mural.liveUrl` e `footerContent.muralUrl`) — enquanto for `#`, os botões de "mural ao vivo" ficam ocultos.
