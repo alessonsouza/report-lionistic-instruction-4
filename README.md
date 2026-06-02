@@ -38,7 +38,14 @@ ffmpeg -i "media-raw/video-entrevistas-da-proposta.MOV" \
   public/mais-que-cargos/video-entrevistas.mp4
 ```
 
-Enquanto o MP4 não existir, o player exibe a imagem de capa com o selo "Vídeo em processamento". A imagem de capa (`capa-todos-diretores-entrevistando.jpg`) já serve de *poster*, então um passo separado de `ffmpeg` para o poster não é necessário.
+O vídeo é retrato (9:16); o player exibe-o inteiro, centralizado, sem corte. Gere também um *poster* a partir de um frame do próprio vídeo:
+
+```bash
+ffmpeg -y -ss 00:00:03 -i public/mais-que-cargos/video-entrevistas.mp4 \
+  -frames:v 1 -q:v 3 public/mais-que-cargos/video-poster.jpg
+```
+
+O selo "Vídeo em processamento" é controlado pelo flag `video.pending` em `content.ts` — deixe `false` quando o MP4 existir.
 
 ## Conteúdo pendente
 
