@@ -1,0 +1,18 @@
+# Keep the build context small and safe.
+node_modules
+dist
+dist-ssr
+
+# 808 MB raw video original — never send it to the Docker daemon.
+media-raw
+
+.git
+.gitignore
+*.log
+
+# Docs / plans / editor noise (not needed in the image)
+docs
+.vscode
+.idea
+.DS_Store
+*.local
