@@ -29,10 +29,10 @@ bun run optimize:images
 
 ### Vídeo das entrevistas
 
-O arquivo original `.MOV` (~808 MB) **não** é versionado (está no `.gitignore`). Converta-o para um MP4 leve, próprio para web, e coloque o resultado em `public/mais-que-cargos/video-entrevistas.mp4` (referenciado pelo player). Requer [ffmpeg](https://ffmpeg.org/):
+O arquivo original `.MOV` (~808 MB) fica em `media-raw/` — **fora** de `public/`, para que o Vite nunca o inclua no build — e **não** é versionado (`.gitignore`). Converta-o para um MP4 leve e coloque o resultado em `public/mais-que-cargos/video-entrevistas.mp4` (referenciado pelo player). Requer [ffmpeg](https://ffmpeg.org/):
 
 ```bash
-ffmpeg -i "public/mais-que-cargos/video-entrevistas-da-proposta.MOV" \
+ffmpeg -i "media-raw/video-entrevistas-da-proposta.MOV" \
   -vf scale=-2:720 -c:v libx264 -crf 23 -preset medium \
   -c:a aac -movflags +faststart \
   public/mais-que-cargos/video-entrevistas.mp4

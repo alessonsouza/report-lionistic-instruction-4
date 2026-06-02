@@ -15,9 +15,11 @@ dist-ssr
 # Windows alternate-data-stream metadata
 *:Zone.Identifier
 
-# Raw/original media (originals are converted/optimized before shipping — see docs/plans asset-prep)
-public/**/*.MOV
-public/**/*.mov
+# Raw/original media — kept out of public/ so Vite never bundles it into the build.
+# Convert media-raw/*.MOV to public/.../*.mp4 via ffmpeg (see README).
+/media-raw/
+*.MOV
+*.mov
 
 # Editor directories and files
 .vscode/*
