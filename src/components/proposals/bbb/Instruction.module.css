@@ -16,7 +16,7 @@
 
 .container {
   position: relative;
-  max-width: 800px;
+  max-width: var(--container-max);
   margin: 0 auto;
 }
 
@@ -48,12 +48,20 @@
   color: var(--text-muted);
 }
 
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: var(--space-2xl);
+  align-items: start;
+}
+
 .card {
   background: var(--cream);
   border: 1px solid var(--cream-dark);
   border-radius: var(--radius-xl);
   padding: var(--space-3xl);
   box-shadow: var(--shadow-md);
+  height: 100%;
 }
 
 .themeHeader {

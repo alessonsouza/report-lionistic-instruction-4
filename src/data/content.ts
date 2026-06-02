@@ -67,9 +67,11 @@ export type Proposal = {
     instruction: {
       title: string;
       subtitle: string;
-      theme: string;
-      paragraphs: string[];
-      author: { name: string; club: string };
+      items: {
+        theme: string;
+        paragraphs: string[];
+        author: { name: string; club: string };
+      }[];
     };
     acknowledgments: {
       title: string;
@@ -81,7 +83,7 @@ export type Proposal = {
 };
 
 export const reportMeta = {
-  badge: 'Relatório de Trimestre',
+  badge: 'Relatório de 4° Trimestre',
   titleAccent: 'Instrução',
   titleMain: 'Leoística',
   subtitle:
@@ -252,29 +254,50 @@ export const proposals: Proposal[] = [
         ],
       },
       instruction: {
-        title: 'A Instrução Leoística',
-        subtitle: 'Texto apresentado na reunião do clube',
-        theme: 'Fazer acontecer: do silêncio à ação',
-        paragraphs: [
-          'Nem tudo o que sustenta o movimento é visto diante dos olhos de todos.',
-          'As campanhas ganham vida, as atividades são realizadas, os resultados aparecem e os sorrisos ficam registrados nas fotos. Mas, antes de tudo isso, existiram pensamentos, dedicação e inúmeros momentos silenciosos nos bastidores.',
-          'O silêncio das ideias sendo construídas.<br />Das conversas tentando alinhar uma comissão.<br />Das noites pensando em como cada detalhe vai funcionar.<br />Da preocupação para que tudo dê certo.',
-          'Porque fazer acontecer nunca começa no momento em que tudo aparece pronto.',
-          'Começa na intenção.<br />Na disposição de ajudar mesmo quando a rotina aperta.<br />Na presença de quem permanece, mesmo atravessando seus próprios desafios.<br />Na dedicação colocada até nas menores tarefas, ainda que ninguém perceba.',
-          'É justamente nesse silêncio que mora a essência do servir.',
-          'Nem sempre é simples. Existem períodos de desânimo, inseguranças, frustrações e pensamentos silenciosos sobre se afastar. Há momentos em que continuar exige uma força que ninguém consegue enxergar de fora.',
-          'Mas, ainda assim, existe algo que faz muitos permanecerem: <strong>o amor por servir</strong>.',
-          'Porque ser LEO vai muito além de campanhas e reuniões.<br />Ser LEO é encontrar pessoas que se tornam abrigo.<br />É descobrir companheiros que permanecem presentes nos dias difíceis.<br />É perceber que ninguém precisa carregar tudo sozinho.',
-          'No silêncio, muitos entendem o quanto pertencem ao movimento. Entendem que ainda existe propósito em continuar, porque servir transforma não apenas quem recebe, mas também quem escolhe permanecer.',
-          'A força do movimento está exatamente nisso: pessoas comuns, vivendo suas próprias batalhas, encontrando umas nas outras motivos para seguir semeando sonhos e transformando realidades.',
-          'E no meio de tudo isso, nascem líderes singulares.<br />Líderes que não precisam aparecer o tempo todo para serem importantes.<br />Líderes que acolhem com empatia, servem com verdade e carregam coragem para liderar e amor em servir.<br />Líderes que encontraram asas para voar, sem esquecer da importância de permanecer próximos daqueles que caminham ao seu lado.',
-          'Porque toda grande ação nasceu primeiro dentro do coração de alguém.',
-          'Por trás de cada atividade, existe entrega.<br />Por trás de cada campanha, existe cuidado.<br />Por trás de cada resultado, existe alguém que não desistiu.',
-          'E é exatamente isso que torna o movimento tão especial.',
-          'A capacidade de transformar silêncio em força, intenção em ação, sonhos em realidade, pessoas em lar umas para as outras.',
-          'Porque, no fim, viver o extraordinário nunca foi sobre grandes feitos vistos por todos, mas sim sobre <strong>fazer acontecer mesmo quando ninguém está olhando</strong>.',
+        title: 'As Instruções Leoísticas',
+        subtitle: 'Textos apresentados na reunião do clube',
+        items: [
+          {
+            theme: 'Fazer acontecer: do silêncio à ação',
+            paragraphs: [
+              'Nem tudo o que sustenta o movimento é visto diante dos olhos de todos.',
+              'As campanhas ganham vida, as atividades são realizadas, os resultados aparecem e os sorrisos ficam registrados nas fotos. Mas, antes de tudo isso, existiram pensamentos, dedicação e inúmeros momentos silenciosos nos bastidores.',
+              'O silêncio das ideias sendo construídas.<br />Das conversas tentando alinhar uma comissão.<br />Das noites pensando em como cada detalhe vai funcionar.<br />Da preocupação para que tudo dê certo.',
+              'Porque fazer acontecer nunca começa no momento em que tudo aparece pronto.',
+              'Começa na intenção.<br />Na disposição de ajudar mesmo quando a rotina aperta.<br />Na presença de quem permanece, mesmo atravessando seus próprios desafios.<br />Na dedicação colocada até nas menores tarefas, ainda que ninguém perceba.',
+              'É justamente nesse silêncio que mora a essência do servir.',
+              'Nem sempre é simples. Existem períodos de desânimo, inseguranças, frustrações e pensamentos silenciosos sobre se afastar. Há momentos em que continuar exige uma força que ninguém consegue enxergar de fora.',
+              'Mas, ainda assim, existe algo que faz muitos permanecerem: <strong>o amor por servir</strong>.',
+              'Porque ser LEO vai muito além de campanhas e reuniões.<br />Ser LEO é encontrar pessoas que se tornam abrigo.<br />É descobrir companheiros que permanecem presentes nos dias difíceis.<br />É perceber que ninguém precisa carregar tudo sozinho.',
+              'No silêncio, muitos entendem o quanto pertencem ao movimento. Entendem que ainda existe propósito em continuar, porque servir transforma não apenas quem recebe, mas também quem escolhe permanecer.',
+              'A força do movimento está exatamente nisso: pessoas comuns, vivendo suas próprias batalhas, encontrando umas nas outras motivos para seguir semeando sonhos e transformando realidades.',
+              'E no meio de tudo isso, nascem líderes singulares.<br />Líderes que não precisam aparecer o tempo todo para serem importantes.<br />Líderes que acolhem com empatia, servem com verdade e carregam coragem para liderar e amor em servir.<br />Líderes que encontraram asas para voar, sem esquecer da importância de permanecer próximos daqueles que caminham ao seu lado.',
+              'Porque toda grande ação nasceu primeiro dentro do coração de alguém.',
+              'Por trás de cada atividade, existe entrega.<br />Por trás de cada campanha, existe cuidado.<br />Por trás de cada resultado, existe alguém que não desistiu.',
+              'E é exatamente isso que torna o movimento tão especial.',
+              'A capacidade de transformar silêncio em força, intenção em ação, sonhos em realidade, pessoas em lar umas para as outras.',
+              'Porque, no fim, viver o extraordinário nunca foi sobre grandes feitos vistos por todos, mas sim sobre <strong>fazer acontecer mesmo quando ninguém está olhando</strong>.',
+            ],
+            author: { name: 'C.LEO Mariana Battisti', club: 'LEO Clube Ômega Pinhalzinho' },
+          },
+          {
+            theme: 'Singularidade que Faz Acontecer',
+            paragraphs: [
+              'Em um mundo onde quase tudo parece ter apenas valor material, o voluntariado surge como algo que vai além das trocas comuns. Ele representa a capacidade humana de se doar e de agir pelo outro sem esperar nada em troca.',
+              'Na prática, pertencer a um movimento de serviço voluntário é muito mais do que isso: em meio a uma rotina corrida, intensa e cheia de demandas, onde o nosso tempo é cada vez mais precioso, o voluntariado se torna um verdadeiro investimento. E é assim que percebemos que o movimento LEO vai muito além do servir: é entrega, é tempo, é coração e, acima de tudo, amor.',
+              'Ser companheiro LEO é se doar por inteiro, é oferecer tempo, atenção e cuidado de forma genuína, mesmo quando não é fácil. Ser companheiro LEO é estar presente, é se importar, é transformar pequenas ações em grandes impactos. Ser companheiro LEO é mudar vidas, é transformar casas em lares e mudar realidades, mas acima de tudo, é permitir que essas experiências também transformem a gente.',
+              'Cada pessoa que chega carrega consigo um universo de sonhos, histórias, talentos, medos e desafios. E, dentro de um clube, esses universos se entrelaçam. A gente se reconhece no outro, se apoia, cresce junto e descobre que não precisa caminhar sozinho. É ali que nascem laços verdadeiros, daqueles que a gente leva pra vida.',
+              'A verdade é que no LEO Clube nada é feito sozinho. A gente sonha junto, constrói junto e faz acontecer junto. Cada um com seu jeito, com sua essência, com sua singularidade. E é exatamente isso que torna tudo tão especial: a soma de diferentes histórias criando algo maior do que qualquer um conseguiria sozinho.',
+              'Todos estamos aqui por um motivo, e cada pessoa tem um papel importante naquilo que somos. Cada jeito e cada forma de se expressar ajuda a construir a nossa identidade como clube, e é isso que torna cada clube singular.',
+              'Quando unimos nossas forças, percebemos que a entrega genuína faz parte de quem somos. O que nos move é a força de vontade, o amor em liderar e o desejo de viver o extraordinário. Juntos, semeamos sonhos, transformamos realidades e aprendemos a liderar de forma singular, enquanto fazemos acontecer com amor e tornamos os nossos maiores desafios em realidade. Crescemos, evoluímos e nos tornamos melhores a cada campanha, atividade e ação realizada.',
+              'O legado que construímos não está só nas ações realizadas, mas nas marcas que deixamos nas pessoas e, consequentemente, em nós mesmos. Pertencer a um clube unido, forte e estruturado traz um sentimento enorme de gratidão: gratidão a quem escolhe ficar, a quem se entrega, a quem se importa, a quem se dedica e a quem não mede esforços para fazer a diferença todos os dias, mesmo quando é difícil conciliar a rotina.',
+              'Que o LEO Clube continue nos ensinando na prática o verdadeiro sentido do servir, e que sigamos servindo motivados e felizes por fazer parte de algo que nos ensina, na prática, que liderança e pertencimento vão muito além das palavras.',
+              'LEO Clube é investir amor ao próximo e receber, em forma de sorrisos, aquilo que palavras não podem expressar. <strong>LEO Clube é sentimento, é entrega e singularidade!</strong>',
+              'Que a gente nunca perca essa essência. Que a gente continue acreditando, sentindo e fazendo acontecer juntos. Porque fazer parte disso é mais do que participar de um movimento: é viver algo que transforma, que marca e que fica.',
+            ],
+            author: { name: 'C.LEO Letícia Simon', club: 'LEO Clube Ômega Pinhalzinho' },
+          },
         ],
-        author: { name: 'C.LEO Mariana Battisti', club: 'LEO Clube Ômega Pinhalzinho' },
       },
       acknowledgments: {
         title: 'Agradecimentos',
