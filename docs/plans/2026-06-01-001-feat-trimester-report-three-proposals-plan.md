@@ -1,7 +1,7 @@
 ---
 title: "feat: Relatório de Trimestre — Três Propostas da Instrução Leoística (report-4)"
 type: feat
-status: active
+status: completed
 date: 2026-06-01
 depth: deep
 origin: none (solo planning — user-provided description)
