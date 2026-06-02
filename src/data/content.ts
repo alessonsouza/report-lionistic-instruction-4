@@ -146,9 +146,9 @@ export const proposals: Proposal[] = [
     ],
     video: {
       src: '/mais-que-cargos/video-entrevistas.mp4',
-      poster: '/mais-que-cargos/capa-todos-diretores-entrevistando.jpg',
+      poster: '/mais-que-cargos/video-poster.jpg',
       caption: 'Vídeo com as entrevistas dos diretores do clube',
-      pending: true,
+      pending: false,
     },
   },
 
