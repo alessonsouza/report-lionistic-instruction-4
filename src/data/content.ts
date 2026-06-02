@@ -167,8 +167,7 @@ export const proposals: Proposal[] = [
       'Na nossa adaptação, em vez do Padlet, construímos um <strong>mural digital próprio</strong>: um site onde cada companheiro publicou suas fotos como memória e pôde interagir com as memórias dos outros através de <strong>curtidas e comentários</strong> — transformando o mural coletivo em um espaço vivo de afeto e conexão.',
     ],
     mural: {
-      // TODO(content): substituir pela URL real do mural ao vivo.
-      liveUrl: '#',
+      liveUrl: 'https://muralomegapzo.ascorp.app/',
       official: {
         id: 1,
         src: '/relatos-de-afeto/foto-oficial-site-mural.jpg',
@@ -289,6 +288,5 @@ export const footerContent = {
   district: 'Distrito LD-8',
   year: '2026',
   proposal: 'Unir para Instruir',
-  // TODO(content): confirmar a URL do mural ao vivo (mesma de proposals[relatos-de-afeto].mural.liveUrl).
-  muralUrl: '#',
+  muralUrl: 'https://muralomegapzo.ascorp.app/',
 };
