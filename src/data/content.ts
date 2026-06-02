@@ -145,12 +145,6 @@ export const proposals: Proposal[] = [
         alt: 'Diretora de Novos Associados durante a entrevista',
         caption: 'Diretoria de Novos Associados',
       },
-      {
-        id: 5,
-        src: '/mais-que-cargos/entrevista-registro-1.jpg',
-        alt: 'Registro de uma das entrevistas',
-        caption: 'Um dos momentos de entrevista',
-      },
     ],
     video: {
       src: '/mais-que-cargos/video-entrevistas.mp4',

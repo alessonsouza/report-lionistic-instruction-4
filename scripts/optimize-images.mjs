@@ -21,7 +21,6 @@ const MAP = [
   ['mais-que-cargos', 'diretora-novos-associados-entrevistando.PNG', 'diretora-novos-associados-entrevistando.jpg'],
   ['mais-que-cargos', 'imagem-diretor-instrucao-entrevistando-mais-importante.PNG', 'diretor-instrucao-entrevistando.jpg'],
   ['mais-que-cargos', 'imagem-diretora-lideranca-entrevistando.PNG', 'diretora-lideranca-entrevistando.jpg'],
-  ['mais-que-cargos', 'WhatsApp Image 2026-05-06 at 14.22.38.jpeg', 'entrevista-registro-1.jpg'],
 
   // ── Relatos de Afeto (mural showcase) ────────────────────────────────────
   ['relatos-de-afeto', 'foto-oficial-site-mural.jpeg', 'foto-oficial-site-mural.jpg'],
