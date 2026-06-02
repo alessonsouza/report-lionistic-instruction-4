@@ -1,0 +1,61 @@
+.credits {
+  margin-top: var(--space-4xl);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.creditsTitle {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--leo-red);
+  margin-bottom: var(--space-xl);
+}
+
+.creditsList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-2xl);
+}
+
+.person {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--leo-gold) 0%, var(--leo-red) 100%);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.personInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.personName {
+  font-weight: 600;
+  color: var(--leo-navy);
+  font-size: 1rem;
+}
+
+.personRole {
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+}

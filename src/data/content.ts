@@ -45,6 +45,12 @@ export type Proposal = {
   galleryTitle?: string;
   gallerySubtitle?: string;
 
+  /** Optional credit block thanking companheiros who took part in the proposal. */
+  credits?: {
+    title: string;
+    people: { name: string; role?: string }[];
+  };
+
   /* Proposal-specific blocks (only the relevant one is set per proposal). */
   video?: {
     src: string;
@@ -151,6 +157,13 @@ export const proposals: Proposal[] = [
       poster: '/mais-que-cargos/video-poster.jpg',
       caption: 'Vídeo com as entrevistas dos diretores do clube',
       pending: false,
+    },
+    credits: {
+      title: 'Participaram desta proposta',
+      people: [
+        { name: 'Carolina Cecatto' },
+        { name: 'Júlia Gaboardi' },
+      ],
     },
   },
 
