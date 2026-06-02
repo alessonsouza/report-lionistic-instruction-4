@@ -112,14 +112,13 @@ export const proposals: Proposal[] = [
     title: 'Faça Acontecer',
     subtitle:
       'Escrevendo nossa história: instrução, identidade e compromisso através do relato dos diretores do clube.',
-    // TODO(content): revisar redação final com Alesson.
     narrative: [
-      'A proposta distrital <strong>“Faça Acontecer - Escrevendo Nossa História”</strong> valoriza o poder do relato, do testemunho e da memória como formas de fortalecer a identidade e o compromisso com o movimento LEO, sempre em alusão ao lema do Distrito: <em>Faça Acontecer</em>.',
-      'Na nossa realidade, adaptamos essa proposta para uma série de <strong>entrevistas com os diretores do clube</strong>. Cada companheiro foi convidado a contar, com suas próprias palavras, o que o move a fazer acontecer - transformando a instrução em um espaço de escuta, testemunho e inspiração.',
-      'Das conversas nasceu uma certeza que dá nome a esta atividade: <strong>mais que cargos, somos causas</strong>. As entrevistas mostraram que por trás de cada pasta existe uma pessoa movida por propósito, e que registrar essas vozes é também escrever a história do nosso clube.',
+      'No dia 1º de maio, durante a campanha <strong>LEO Doce Lar</strong>, os CCLEO Alesson, Carolina e Júlia desenvolveram a proposta com tema <strong>“Mais que cargos, somos causas”</strong>. 💜🦁',
+      'A iniciativa das pastas de Instrução Leoística, Liderança e Novos Associados teve como objetivo conversar com os companheiros presentes na campanha, conhecendo um pouco mais sobre as funções que já exerceram dentro do movimento leoístico e suas trajetórias profissionais.',
+      'Além disso, buscamos refletir sobre as conexões entre o voluntariado e a vida profissional, entendendo de que forma as experiências vividas no LEO Clube contribuem para o trabalho, a liderança e o desenvolvimento pessoal de cada companheiro.',
     ],
     galleryTitle: 'Registros das Entrevistas',
-    gallerySubtitle: 'Os diretores do clube compartilhando o que os move a fazer acontecer',
+    gallerySubtitle: 'Os diretores do clube entrevistando os companheiros sobre como o LEO clube beneficia suas vidas em suas profissões e como suas profissões beneficiam o clube',
     gallery: [
       {
         id: 1,
@@ -149,7 +148,7 @@ export const proposals: Proposal[] = [
     video: {
       src: '/mais-que-cargos/video-entrevistas.mp4',
       poster: '/mais-que-cargos/video-poster.jpg',
-      caption: 'Vídeo com as entrevistas dos diretores do clube',
+      caption: '',
       pending: false,
     },
     credits: {
