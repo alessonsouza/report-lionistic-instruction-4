@@ -45,7 +45,7 @@ export function Instruction({ content }: InstructionProps) {
 
           <div className={styles.textContent}>
             {content.paragraphs.map((paragraph, index) => (
-              // Static, author-authored HTML from content.ts — no user input.
+              // Static, author-authored HTML from content.ts - no user input.
               <p key={index} className={styles.paragraph} dangerouslySetInnerHTML={{ __html: paragraph }} />
             ))}
           </div>

@@ -1,11 +1,11 @@
 /* ============================================================
-   Content model — single source of truth for the report.
+   Content model - single source of truth for the report.
    Edit copy here without touching components.
 
    Narrative strings may contain inline HTML (<strong>, <em>, <a>).
    This is rendered via dangerouslySetInnerHTML in the section
    components. SAFE because all content here is static and
-   author-authored — there is no user input on this page.
+   author-authored - there is no user input on this page.
 
    TODO(content): items marked below await Alesson's final adapted
    wording and the live-mural URL. Drafts are placeholders, safe to ship.
@@ -85,7 +85,7 @@ export const reportMeta = {
   titleAccent: 'Instrução',
   titleMain: 'Leoística',
   subtitle:
-    'Três propostas que transformaram a instrução em conexão, memória e alegria neste trimestre — sob a proposta <strong>Unir para Instruir</strong>.',
+    'Três propostas que transformaram a instrução em conexão, memória e alegria neste trimestre - sob a proposta <strong>Unir para Instruir</strong>.',
   club: 'LEO Clube Ômega Pinhalzinho-SC',
   district: 'Distrito LD-8',
   year: '2026',
@@ -106,8 +106,8 @@ export const proposals: Proposal[] = [
       'Escrevendo nossa história: instrução, identidade e compromisso através do relato dos diretores do clube.',
     // TODO(content): revisar redação final com Alesson.
     narrative: [
-      'A proposta distrital <strong>“Faça Acontecer – Escrevendo Nossa História”</strong> valoriza o poder do relato, do testemunho e da memória como formas de fortalecer a identidade e o compromisso com o movimento LEO, sempre em alusão ao lema do Distrito: <em>Faça Acontecer</em>.',
-      'Na nossa realidade, adaptamos essa proposta para uma série de <strong>entrevistas com os diretores do clube</strong>. Cada companheiro foi convidado a contar, com suas próprias palavras, o que o move a fazer acontecer — transformando a instrução em um espaço de escuta, testemunho e inspiração.',
+      'A proposta distrital <strong>“Faça Acontecer - Escrevendo Nossa História”</strong> valoriza o poder do relato, do testemunho e da memória como formas de fortalecer a identidade e o compromisso com o movimento LEO, sempre em alusão ao lema do Distrito: <em>Faça Acontecer</em>.',
+      'Na nossa realidade, adaptamos essa proposta para uma série de <strong>entrevistas com os diretores do clube</strong>. Cada companheiro foi convidado a contar, com suas próprias palavras, o que o move a fazer acontecer - transformando a instrução em um espaço de escuta, testemunho e inspiração.',
       'Das conversas nasceu uma certeza que dá nome a esta atividade: <strong>mais que cargos, somos causas</strong>. As entrevistas mostraram que por trás de cada pasta existe uma pessoa movida por propósito, e que registrar essas vozes é também escrever a história do nosso clube.',
     ],
     galleryTitle: 'Registros das Entrevistas',
@@ -162,9 +162,9 @@ export const proposals: Proposal[] = [
       'Memórias do servir: um mural digital onde cada fotografia se torna ponte entre vivências.',
     // TODO(content): revisar redação final e confirmar a URL do mural ao vivo.
     narrative: [
-      'Inspirada na proposta <strong>“Relatos de Afeto: Memórias do Servir”</strong>, esta dinâmica convida cada companheiro a trazer uma fotografia que represente uma memória marcante vivida dentro do movimento LEO — um momento de superação, alegria, amizade ou qualquer experiência de impacto positivo.',
+      'Inspirada na proposta <strong>“Relatos de Afeto: Memórias do Servir”</strong>, esta dinâmica convida cada companheiro a trazer uma fotografia que represente uma memória marcante vivida dentro do movimento LEO - um momento de superação, alegria, amizade ou qualquer experiência de impacto positivo.',
       'A partir das imagens, os companheiros compartilham suas histórias, sentimentos e aprendizados, fortalecendo vínculos, resgatando memórias e inspirando uns aos outros.',
-      'Na nossa adaptação, em vez do Padlet, construímos um <strong>mural digital próprio</strong>: um site onde cada companheiro publicou suas fotos como memória e pôde interagir com as memórias dos outros através de <strong>curtidas e comentários</strong> — transformando o mural coletivo em um espaço vivo de afeto e conexão.',
+      'Na nossa adaptação, em vez do Padlet, construímos um <strong>mural digital próprio</strong>: um site onde cada companheiro publicou suas fotos como memória e pôde interagir com as memórias dos outros através de <strong>curtidas e comentários</strong> - transformando o mural coletivo em um espaço vivo de afeto e conexão.',
     ],
     mural: {
       liveUrl: 'https://muralomegapzo.ascorp.app/',

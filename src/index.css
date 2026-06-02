@@ -1,5 +1,5 @@
 /* ============================================
-   Relatório de Trimestre — Instrução Leoística
+   Relatório de Trimestre - Instrução Leoística
    LEO Clube Ômega Pinhalzinho-SC · Distrito LD-8
    Global Styles (design system ported from report-3)
    ============================================ */
@@ -57,7 +57,7 @@
   --radius-lg: 16px;
   --radius-xl: 24px;
 
-  /* Sticky nav height — used to offset anchor scroll targets */
+  /* Sticky nav height - used to offset anchor scroll targets */
   --nav-height: 60px;
 }
 

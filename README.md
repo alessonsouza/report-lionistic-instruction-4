@@ -1,12 +1,12 @@
-# Relatório de Trimestre — Instrução Leoística
+# Relatório de Trimestre - Instrução Leoística
 
 Relatório de trimestre da Diretoria de Instrução Leoística do **LEO Clube Ômega Pinhalzinho-SC** (Distrito LD-8), sob a proposta *Unir para Instruir*. Página única que apresenta três propostas:
 
-1. **Faça Acontecer – Escrevendo Nossa História** (*Mais que cargos, somos causas*) — entrevistas com os diretores do clube (galeria + vídeo).
-2. **Relatos de Afeto: Memórias do Servir** — vitrine do mural digital coletivo (fotos, curtidas/comentários e stories).
-3. **BBB da Instrução** — dinâmica de votação inspirada no BBB (linha do tempo, números, instrução e agradecimentos).
+1. **Faça Acontecer - Escrevendo Nossa História** (*Mais que cargos, somos causas*) - entrevistas com os diretores do clube (galeria + vídeo).
+2. **Relatos de Afeto: Memórias do Servir** - vitrine do mural digital coletivo (fotos, curtidas/comentários e stories).
+3. **BBB da Instrução** - dinâmica de votação inspirada no BBB (linha do tempo, números, instrução e agradecimentos).
 
-Stack: React 19 + Vite + TypeScript, animações com framer-motion, estilos em CSS Modules. Conteúdo centralizado em [`src/data/content.ts`](src/data/content.ts) — edite os textos lá, sem mexer nos componentes.
+Stack: React 19 + Vite + TypeScript, animações com framer-motion, estilos em CSS Modules. Conteúdo centralizado em [`src/data/content.ts`](src/data/content.ts) - edite os textos lá, sem mexer nos componentes.
 
 ## Desenvolvimento
 
@@ -29,7 +29,7 @@ bun run optimize:images
 
 ### Vídeo das entrevistas
 
-O arquivo original `.MOV` (~808 MB) fica em `media-raw/` — **fora** de `public/`, para que o Vite nunca o inclua no build — e **não** é versionado (`.gitignore`). Converta-o para um MP4 leve e coloque o resultado em `public/mais-que-cargos/video-entrevistas.mp4` (referenciado pelo player). Requer [ffmpeg](https://ffmpeg.org/):
+O arquivo original `.MOV` (~808 MB) fica em `media-raw/` - **fora** de `public/`, para que o Vite nunca o inclua no build - e **não** é versionado (`.gitignore`). Converta-o para um MP4 leve e coloque o resultado em `public/mais-que-cargos/video-entrevistas.mp4` (referenciado pelo player). Requer [ffmpeg](https://ffmpeg.org/):
 
 ```bash
 ffmpeg -i "media-raw/video-entrevistas-da-proposta.MOV" \
@@ -45,11 +45,11 @@ ffmpeg -y -ss 00:00:03 -i public/mais-que-cargos/video-entrevistas.mp4 \
   -frames:v 1 -q:v 3 public/mais-que-cargos/video-poster.jpg
 ```
 
-O selo "Vídeo em processamento" é controlado pelo flag `video.pending` em `content.ts` — deixe `false` quando o MP4 existir.
+O selo "Vídeo em processamento" é controlado pelo flag `video.pending` em `content.ts` - deixe `false` quando o MP4 existir.
 
 ## Conteúdo pendente
 
 Marcados como `// TODO(content):` em `src/data/content.ts`:
 
 - Redação final adaptada de cada proposta.
-- A **URL do mural ao vivo** (`proposals[relatos-de-afeto].mural.liveUrl` e `footerContent.muralUrl`) — enquanto for `#`, os botões de "mural ao vivo" ficam ocultos.
+- A **URL do mural ao vivo** (`proposals[relatos-de-afeto].mural.liveUrl` e `footerContent.muralUrl`) - enquanto for `#`, os botões de "mural ao vivo" ficam ocultos.
