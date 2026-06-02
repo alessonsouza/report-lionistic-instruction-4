@@ -310,15 +310,15 @@ export const proposals: Proposal[] = [
       acknowledgments: {
         title: 'Agradecimentos',
         subtitle: 'Palavras do Diretor de Instrução Leoística',
-        text: `Agradeço às companheiras Eloá Goularte, Carolina Cecatto e Júlia Gaboardi por aceitarem participar do paredão e pela disposição em contribuir com o protocolo da reunião.
+        text: `Agradeço de coração às companheiras Mariana Battisti, Letícia Simon e Maria Laura Rolim por escreverem e compartilharem suas instruções leoísticas, transformando palavras em reflexão, propósito e afeto para todo o clube.
 
-Agradeço também à Presidência pela parceria na proposta "Unir para Instruir", que permitiu tornar esse momento mais leve e divertido para todo o clube.
+Agradeço também à Presidência pela parceria na proposta "Unir para Instruir", que permitiu tornar a instrução um momento mais leve, criativo e conectado à realidade do clube.
 
-O engajamento dos companheiros na votação foi incrível, ver todo mundo se divertindo e participando ativamente mostrou que a instrução pode ser muito mais do que uma formalidade. Ela pode ser um momento de conexão e alegria.`,
+Ver cada uma colocar a sua singularidade no que escreveu mostrou que a instrução pode ser muito mais do que uma formalidade. Ela pode ser um momento de conexão, identidade e alegria.`,
         collaborators: [
-          { name: 'Eloá Goularte', role: 'Emparedada - 2º lugar (Invocação a Deus)' },
-          { name: 'Carolina Cecatto', role: 'Emparedada - 1º lugar (Instrução Leoística)' },
-          { name: 'Júlia Gaboardi', role: 'Emparedada' },
+          { name: 'Mariana Battisti', role: 'Instrução: do silêncio à ação' },
+          { name: 'Letícia Simon', role: 'Instrução: singularidade que faz acontecer' },
+          { name: 'Maria Laura Rolim', role: 'Instrução: propósito' },
         ],
       },
     },
